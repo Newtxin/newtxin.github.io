@@ -1,0 +1,17 @@
+---
+language: node_js, ruby
+node_js:
+  - 13.7
+rvm:
+  - 2.7
+cache:
+  directories:
+  - node_modules
+  - vendor
+before_script:
+  - gem install bundler
+  - npm install -g gulp yarn
+script:
+  - gulp build
+install:
+  - npm install
